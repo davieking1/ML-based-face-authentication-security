@@ -1,8 +1,3 @@
-# USAGE
-# python extract_embeddings.py --dataset dataset --embeddings output/embeddings.pickle \
-#	--detector face_detection_model --embedding-model openface_nn4.small2.v1.t7
-
-# import the necessary packages
 from imutils import paths
 import numpy as np
 import argparse
@@ -63,6 +58,7 @@ for (i, imagePath) in enumerate(imagePaths):
 	# load the image, resize it to have a width of 600 pixels (while
 	# maintaining the aspect ratio), and then grab the image
 	# dimensions
+	#image = cv2.cvtColor(imagePath, cv2.COLOR_GRAY2BGR)
 	image = cv2.imread(imagePath)
 	image = imutils.resize(image, width=600)
 	(h, w) = image.shape[:2]
